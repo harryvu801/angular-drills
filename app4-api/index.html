@@ -1,6 +1,16 @@
-<html ng-app="apiApp">
-	<body>
-		
+<html ng-app="app4">
+	<body ng-controller="mainCtrl">
+		<form ng-submit="getPokemon(pokemon)">
+			<input ng-model="pokemon">
+		</form>
+
+		<button ng-click="getPokemon(pokemon)">Search a Pokemon</button>
+	</br>
+
+
+
+		<img ng-src="{{pokemon2}}" alt="Oops, I guess no pokemon for you">
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
