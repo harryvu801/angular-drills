@@ -1,13 +1,23 @@
 angular.module('app4').controller('mainCtrl', function($scope, service4){
 
-  $scope.getPokemon = function (pokemon) {
-    console.log('ctrlFn fired');
-    service4.getData(pokemon).then(function(data) {
-      console.log('got response from service');
-      console.log(data);
+  $scope.getStarters = function () {
+    service4.getBulbasaur().then(function(data) {
+      $scope.pokemon1 = data;
+    });
+    service4.getSquirtle().then(function(data) {
       $scope.pokemon2 = data;
-    })
+    });
+    service4.getCharmander().then(function(data) {
+      $scope.pokemon3 = data;
+    });
+
   }
-    // $scope.getPokemon();
+
+  $scope.getStarters();
+
+  $scope.start = function () {
+    $scope.show = true;
+  }
+
 
 })

@@ -1,15 +1,12 @@
 <html ng-app="app4">
 	<body ng-controller="mainCtrl">
-		<form ng-submit="getPokemon(pokemon)">
-			<input ng-model="pokemon">
-		</form>
 
-		<button ng-click="getPokemon(pokemon)">Search a Pokemon</button>
-	</br>
+		<button ng-click="start">Press Start</button>
 
+<div class="ng-hide" ng-show="show">
+	<img ng-src="{{pokemon1}}"><img ng-src="{{pokemon2}}"><img ng-src="{{pokemon3}}">
+</div>
 
-
-		<img ng-src="{{pokemon2}}" alt="Oops, I guess no pokemon for you">
 
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
